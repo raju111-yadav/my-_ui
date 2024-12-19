@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raju icon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #7876e0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icon {
+            text-align: center;
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .icon img {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+        }
+
+        .icon p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon" id="whatsapp">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+            <p>WhatsApp</p>
+        </div>
+        <div class="icon" id="facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+            <p>Facebook</p>
+        </div>
+        <div class="icon" id="instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+            <p>Instagram</p>
+        </div>
+        <div class="icon" id="twitter">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+            <p>Twitter</p>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.icon').forEach(icon => {
+            icon.addEventListener('click', () => {
+                alert(`You clicked on ${icon.querySelector('p').textContent}!`);
+            });
+        });
+    </script>
+</body>
+</html>
